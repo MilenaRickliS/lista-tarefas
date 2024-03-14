@@ -1,19 +1,10 @@
-import RoutesApp from "./routes";
-
-function App(){
-  return(
-    <RoutesApp/>
-  );
-}
-
-export default App;
-
-/*import './App.css';
+import '../Tarefas/estilo.css';
+import { Link } from "react-router-dom";
 
 // Importa os hooks useState e useEffect do React, que são essenciais para o funcionamento do componente.
 import { useState, useEffect } from 'react';
 // Importa as funções de conexão com o Firebase e as operações de banco de dados do Firestore.
-import { db, auth } from './firebaseConnection';
+import { db, auth } from '../../firebaseConnection';
 // Importa funções específicas do Firestore para manipulação de documentos e coleções.
 import {
   doc,
@@ -198,30 +189,11 @@ return (
         <strong>Seja bem-vindo(a) (Você está logado!)</strong> <br/>
         <span>ID: {userDetail.uid} - Email: {userDetail.email}</span> <br/>
         <button onClick={fazerLogout}>Sair da conta</button>
+        <Link to='/'><button>Voltar</button></Link>
         <br/> <br/>
       </div>
     )}
-    
-    <div className="container">
-      <h2>Usuarios</h2>
-      <label>Email</label>
-      <input
-      value={email}
-      onChange={(e) => setEmail(e.target.value)}
-      placeholder="Digite um email"
-      /> <br/>
-      <label>Senha</label>
-      <input
-      value={senha}
-      onChange={(e) => setSenha(e.target.value)}
-      placeholder="Informe sua senha"
-      /> <br/>
-      <div className='dolado'>
-        <button onClick={novoUsuario}>Cadastrar</button>
-
-        <button onClick={logarUsuario}>Fazer login</button>
-      </div>
-      </div>
+        
       <br/><br/>
       
       <hr/>
@@ -271,4 +243,4 @@ return (
   </div>
 );
 }
-export default App;*/
+export default App;

@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos para o corpo da página */
+  body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /* Escolha a fonte que preferir */
+    background-color: #f4fccb; /* Cor de fundo da página */
+    color: #333; /* Cor do texto */
+    padding: 20px; /* Espaçamento interno */
+  }
+  
+  /* Estilos para os títulos */
+  h1 {
+    color: #cfb106; /* Cor do título principal */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+  }
+  
+  h2 {
+    color: #137a94; /* Cor do subtítulo */
+    margin-bottom: 10px; /* Espaçamento abaixo do subtítulo */
+  }
+  
+  /* Estilos para os contêineres */
+  .container {
+    background-color: #fff; /* Cor de fundo dos contêineres */
+    padding: 20px; /* Espaçamento interno dos contêineres */
+    border-radius: 5px; /* Borda arredondada */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+  }
+  
+  /* Estilos para os inputs */
+  input,
+  textarea {
+    width: 100%; /* Largura total */
+    padding: 10px; /* Espaçamento interno */
+    margin-bottom: 10px; /* Espaçamento abaixo do input */
+    border: 1px solid #ccc; /* Borda */
+    border-radius: 5px; /* Borda arredondada */
+  }
+  
+  /* Estilos para os botões */
+  button {
+    padding: 10px 20px; /* Espaçamento interno */
+    background-color: #137a94; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer; /* Cursor de ponteiro */
+    transition: background-color 0.3s ease; /* Transição suave */
+    margin: 5px;
+  }
+  
+  button:hover {
+    background-color: #10313a; /* Cor de fundo do botão ao passar o mouse */
+  }
+  
+  /* Estilos para as listas */
+  ul {
+    margin-top: 10px;
+    list-style-type: none; /* Sem marcadores de lista */
+  }
+  
+  /* Estilos para os itens da lista */
+  li {
+    margin-bottom: 10px; /* Espaçamento abaixo do item */
+  }
+  
+  /* Estilos para as mensagens de alerta */
+  .alert {
+    padding: 10px; /* Espaçamento interno */
+    margin-bottom: 10px; /* Espaçamento abaixo do alerta */
+    border-radius: 5px; /* Borda arredondada */
+  }
+  
+  .alert-success {
+    background-color: #d4edda; /* Cor de fundo do alerta de sucesso */
+    color: #155724; /* Cor do texto do alerta de sucesso */
+  }
+  
+  .alert-error {
+    background-color: #f8d7da; /* Cor de fundo do alerta de erro */
+    color: #721c24; /* Cor do texto do alerta de erro */
+  }
+  
+  /* Estilos para os links */
+  a {
+    color: #007bff; /* Cor do link */
+    text-decoration: none; /* Sem sublinhado */
+  }
+  
+  a:hover {
+    text-decoration: underline; /* Sublinhado ao passar o mouse */
+  }
+  
