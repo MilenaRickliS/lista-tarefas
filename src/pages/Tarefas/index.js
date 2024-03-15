@@ -19,8 +19,6 @@ import {
 } from 'firebase/firestore';
 // Importa funções de autenticação do Firebase para criar usuários, fazer login e logout.
 import {
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
   signOut,
   onAuthStateChanged
 } from 'firebase/auth';
@@ -32,9 +30,6 @@ function App() {
   const [dia, setDia] = useState('');
   // Estado para armazenar o ID do post a ser editado ou excluído.
   const [idTarefa, setIdTarefa] = useState('');
-  // Estado para armazenar o email e a senha do usuário.
-  const [email, setEmail] = useState('');
-  const [senha, setSenha] = useState('');
   // Estado para verificar se o usuário está logado.
   const [user, setUser] = useState(false);
   // Estado para armazenar os detalhes do usuário logado.
@@ -139,41 +134,7 @@ function App() {
     alert("POST DELETADO COM SUCESSO!");
   })
   }
-  // Função para criar um novo usuário no Firebase Auth.
-  async function novoUsuario(){
-    await createUserWithEmailAndPassword(auth, email, senha)
-    .then(() => {
-      console.log("CADASTRADO COM SUCESSO!");
-      setEmail('');
-      setSenha('');
-    })
-    .catch((error) => {
-      if(error.code === 'auth/weak-password'){
-      alert("Senha muito fraca.");
-    }else if(error.code === 'auth/email-already-in-use'){
-      alert("Email já existe!");
-    }
-  })
-  }
-  // Função para fazer login de um usuário no Firebase Auth.
-  async function logarUsuario(){
-    await signInWithEmailAndPassword(auth, email, senha)
-    .then((value) => {
-      console.log("USER LOGADO COM SUCESSO");
-      console.log(value.user);
-      setUserDetail({
-        uid: value.user.uid,
-        email: value.user.email,
-    })
-      setUser(true);
 
-      setEmail('');
-      setSenha('');
-    })
-    .catch(() => {
-      console.log("ERRO AO FAZER O LOGIN");
-    })
-  }
   // Função para fazer logout de um usuário no Firebase Auth.
   async function fazerLogout(){
     await signOut(auth)

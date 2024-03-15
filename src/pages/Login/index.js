@@ -26,12 +26,6 @@ import {
 } from 'firebase/auth';
 // Função principal do componente React, que será renderizada na página.
 function App() {
-  // Estado para armazenar o título do post.
-  const [tarefa, setTarefa] = useState('');
-  // Estado para armazenar o dia.
-  const [dia, setDia] = useState('');
-  // Estado para armazenar o ID do post a ser editado ou excluído.
-  const [idTarefa, setIdTarefa] = useState('');
   // Estado para armazenar o email e a senha do usuário.
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
