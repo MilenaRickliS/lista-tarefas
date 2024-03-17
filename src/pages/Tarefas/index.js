@@ -149,7 +149,6 @@ return (
       <div className='login'>
         <strong>Seja bem-vindo(a) (Você está logado!)</strong> <br/>
         <span>ID: {userDetail.uid} - Email: {userDetail.email}</span> <br/>
-        <button onClick={fazerLogout}>Sair da conta</button>
         <Link to='/'><button>Voltar</button></Link>
         <br/> <br/>
       </div>
